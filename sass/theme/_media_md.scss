@@ -1,0 +1,162 @@
+@media (min-width: 768px) {
+  .no-home {
+    #page-wrapper,
+    #single-wrapper,
+    #index-wrapper {
+      padding-top: 124px;
+    }
+  }
+
+  .wrapper-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+    .barra-navbar {
+      background-color: transparent;
+      transition: all ease-in-out 300ms;
+      -webkit-transition: all ease-in-out 300ms;
+      -moz-transition: all ease-in-out 300ms;
+      -ms-transition: all ease-in-out 300ms;
+      -o-transition: all ease-in-out 300ms;
+    }
+
+    .navbar-nav {
+      .current-menu-item,
+      .current-page-ancestor {
+        a.nav-link {
+          &::before {
+            content: '';
+            left: 0.5rem;
+            right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .video-header-container {
+    padding-top: 56.2%;
+  }
+
+  .content {
+    gap: 1.5rem;
+    .hero-img-layer-1 {
+      max-width: 50%;
+      height: auto;
+      object-fit: cover;
+      align-self: center;
+    }
+  }
+
+  .home-experiences-of-love {
+    .eol-post-row {
+      .eol-post-container {
+        border: 0;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+
+        &:hover .eol-post-info {
+          padding: 0.25rem 0.25rem 0;
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+        }
+
+        .eol-post-info {
+          position: absolute;
+          padding: 0;
+          color: $claro;
+          background-color: rgba($primaryRgb, 0.9);
+          bottom: 0;
+          transform: translateY(100%);
+          transition: all ease-in-out 400ms;
+          -webkit-transition: all ease-in-out 400ms;
+          -moz-transition: all ease-in-out 400ms;
+          -ms-transition: all ease-in-out 400ms;
+          -o-transition: all ease-in-out 400ms;
+          -webkit-transform: translateY(100%);
+          -moz-transform: translateY(100%);
+          -ms-transform: translateY(100%);
+          -o-transform: translateY(100%);
+
+          .eol-post-title-link {
+            color: $claro;
+
+            &:hover {
+              color: darken($claro, 10%);
+              text-decoration: none;
+            }
+          }
+
+          .eol-post-title {
+            margin-bottom: 0;
+          }
+
+          .eol-post-date {
+            font-size: 0.6875rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+          }
+
+          .eol-post-excerpt {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .home-programs {
+    background-color: $oscuro;
+    padding-top: $main-gap;
+    padding-bottom: $main-gap;
+
+    .home-programs-row:nth-child(odd) .home-programs-img-col {
+      order: 1;
+    }
+
+    .home-programs-img-col {
+      padding-top: 4.84rem;
+      padding-bottom: 4.84rem;
+    }
+
+    .home-programs-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.625rem;
+    }
+
+    .home-programs-excerpt {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .understrap-read-more-link {
+      margin-top: 2rem;
+    }
+  }
+
+  .home-help {
+    a.btn {
+      margin: 0 1rem;
+    }
+  }
+
+  .wp-block-columns {
+    flex-direction: row;
+    margin-top: 2rem;
+
+    .address-col {
+      flex: 0.4;
+    }
+  }
+}
+
+.blogImg {
+  padding-right: 0.65rem;
+  padding-bottom: 0.65rem;
+}

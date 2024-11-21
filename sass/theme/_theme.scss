@@ -1,0 +1,467 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,900|Open+Sans:300,300i,400,700');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home ul.navbar-nav li:first-child {
+  .nav-link {
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 4px;
+      background-color: $claro;
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.dropdown-menu {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+
+  .menu-item {
+    background-color: $oscuro;
+    margin-top: 0.15rem;
+
+    .dropdown-item {
+      color: $claro;
+      text-transform: none;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($oscuro, 15%);
+      }
+    }
+  }
+}
+
+.wrapper-navbar {
+  .barra-navbar {
+    text-transform: uppercase;
+    background-color: $primary;
+  }
+
+  .navbar-nav {
+    .current-menu-item,
+    .current-page-ancestor {
+      a.nav-link {
+        display: inline-block;
+        position: relative;
+        color: #fff;
+
+        &::before {
+          content: '';
+          height: 4px;
+          background-color: $claro;
+          display: block;
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .custom-logo-link {
+    img {
+      max-width: 50px;
+    }
+  }
+}
+
+.video-header-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%;
+  overflow: hidden;
+  top: 0px;
+
+  .video-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: fill;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1;
+  }
+  .hero-img-layer-1 {
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: clamp(2rem, 9vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    color: lighten($claro, 50%);
+  }
+
+  .video-header {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+.home .content-area {
+  padding: 0;
+}
+
+.btn {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  padding: 0.5rem 1.75rem;
+  text-transform: uppercase;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+}
+
+.btn-sm {
+  font-size: 0.825rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.titulo-de-seccion {
+  position: relative;
+  margin-bottom: $main-gap;
+  margin-top: $main-gap;
+  text-align: center;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 9.18rem;
+    background-color: $medio;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+
+.home-about {
+  text-align: center;
+  padding-bottom: $main-gap;
+
+  .home-about-description {
+    padding: $main-gap 1rem;
+    font-style: italic;
+  }
+}
+
+.home-experiences-of-love {
+  background-color: $claro;
+  padding-bottom: $main-gap;
+
+  .eol-post-row {
+    padding-top: 2.2rem;
+
+    .eol-post-container {
+      border: 1px solid lighten($medio, 40%);
+      background-color: lighten($claro, 10%);
+      .eol-post-img-wrapper {
+        width: 100%;
+        padding-top: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .eol-post-info {
+        padding: 1rem;
+        width: 100%;
+
+        .eol-post-title-link {
+          color: $primary;
+
+          &:hover {
+            color: lighten($primary, 20%);
+            text-decoration: none;
+          }
+        }
+
+        .eol-post-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.home-programs {
+  background-color: $oscuro;
+  padding-top: $main-gap;
+  padding-bottom: $main-gap;
+
+  .home-programs-img-col {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .home-programs-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.625rem;
+  }
+
+  .home-programs-excerpt {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  .understrap-read-more-link {
+    margin-top: 2rem;
+  }
+}
+
+.home-help {
+  text-align: center;
+
+  .help-description-row {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .help-description-col {
+    text-align: justify;
+    font-style: italic;
+  }
+}
+
+.wrapper-footer {
+  background-color: $oscuro;
+  color: $claro;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: $main-gap;
+
+  .footer-logo {
+    max-width: 75px;
+  }
+
+  .footer-social {
+    text-align: center;
+    font-size: 3.125rem;
+    margin-bottom: 1rem;
+
+    i.fa {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .footer-site-copy {
+    text-align: center;
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.125rem;
+    }
+
+    small {
+      font-size: 0.7rem;
+
+      a {
+        color: $claro;
+      }
+    }
+  }
+}
+
+.widget {
+  margin-bottom: $main-gap;
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 22px;
+
+    li {
+      text-indent: -10px;
+      margin-bottom: 1rem;
+
+      &::before {
+        content: '-';
+        text-indent: -10px;
+      }
+    }
+  }
+
+  .widget-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: '';
+      height: 2px;
+      width: 5.19rem;
+      display: block;
+      background-color: $medio;
+      transform: translateY(0.8rem);
+      -webkit-transform: translateY(0.8rem);
+      -moz-transform: translateY(0.8rem);
+      -ms-transform: translateY(0.8rem);
+      -o-transform: translateY(0.8rem);
+    }
+  }
+
+  .dywh-text {
+    font-style: italic;
+    padding-left: 1rem;
+  }
+}
+
+.wp-block-columns {
+  flex-direction: column;
+}
+
+.contact-form-title {
+  text-align: center;
+  background-color: $oscuro;
+  color: $claro;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+}
+
+.wp-block-column {
+  width: 100%;
+}
+
+.form-control,
+.wpcf7 .wpcf7-validation-errors,
+.wpcf7 input[type='color'],
+.wpcf7 input[type='date'],
+.wpcf7 input[type='datetime-local'],
+.wpcf7 input[type='datetime'],
+.wpcf7 input[type='email'],
+.wpcf7 input[type='file'],
+.wpcf7 input[type='month'],
+.wpcf7 input[type='number'],
+.wpcf7 input[type='range'],
+.wpcf7 input[type='search'],
+.wpcf7 input[type='submit'],
+.wpcf7 input[type='tel'],
+.wpcf7 input[type='text'],
+.wpcf7 input[type='time'],
+.wpcf7 input[type='url'],
+.wpcf7 input[type='week'],
+.wpcf7 select,
+.wpcf7 textarea {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  background-color: $claro;
+  border-color: darken($claro, 2%);
+
+  &:focus {
+    background-color: $claro;
+  }
+}
+
+.wpcf7 input[type='submit'] {
+  background-color: $primary;
+  color: $claro;
+
+  &:focus {
+    background-color: $primary;
+    color: $claro;
+  }
+}
+
+.wpcf7-form-control-wrap {
+  line-height: 1rem;
+  background: red;
+}
